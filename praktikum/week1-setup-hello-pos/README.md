@@ -1,0 +1,3 @@
+# Agri-POS Project 
+Nama: AKHMAD AKBAR SYARIFUDIN 
+NIM: 240202828 
