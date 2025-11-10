@@ -50,13 +50,11 @@ Commit dengan pesan: week2-class-object.
 1. Produk.java
    
 package main.java.com.upb.agripos.model;
-
 public class Produk {
     private String kode;
     private String nama;
     private double harga;
     private int stok;
-
     // Constructor
     public Produk(String kode, String nama, double harga, int stok) {
         this.kode = kode;
@@ -106,21 +104,18 @@ public class Produk {
 
 package main.java.com.upb.agripos.util;
 // creditBy.java
-
-
 public class CreditBy {
     public static void print(String nim, String nama) {
         System.out.println("\ncredit by: " +  nama + " - " +  nim);
     }
 }
 
+
 3. MainProduk.Java
 
 package main.java.com.upb.agripos;
-
 import main.java.com.upb.agripos.model.Produk;
 import main.java.com.upb.agripos.util.CreditBy;
-
 public class MainProduk {
     public static void main(String[] args) {
         Produk p1 = new Produk("QWE-098", "BUKU TULIS", 5000, 50);
@@ -142,7 +137,6 @@ public class MainProduk {
         System.out.println(p1.getNama() + " stok sekarang: " + p1.getStok());
         System.out.println(p2.getNama() + " stok sekarang: " + p2.getStok());
         System.out.println(p3.getNama() + " stok sekarang: " + p3.getStok());
-
 
         CreditBy.print("240202846", "WAHYU SEPTIYAN");
     }
