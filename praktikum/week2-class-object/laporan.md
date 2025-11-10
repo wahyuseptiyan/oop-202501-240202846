@@ -1,73 +1,171 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 2
+Topik: Class dan Object
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : Wahyu Septiyan
+- NIM   : 240202846
+- Kelas : 3IKRA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Mahasiswa mampu menjelaskan konsep class, object, atribut, dan method dalam OOP.
 
----
+Mahasiswa mampu menerapkan access modifier dan enkapsulasi dalam pembuatan class.
+
+Mahasiswa mampu mengimplementasikan class Produk dengan atribut dan method yang sesuai.
+
+Mahasiswa mampu mendemonstrasikan instansiasi object serta menampilkan data produk di console.
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+1. Mahasiswa mampu menjelaskan konsep class, object, atribut, dan method dalam OOP.
 
----
+2. Mahasiswa mampu menerapkan access modifier dan enkapsulasi dalam pembuatan class.
+
+3. Mahasiswa mampu mengimplementasikan class Produk dengan atribut dan method yang sesuai.
+
+4. Mahasiswa mampu mendemonstrasikan instansiasi object serta menampilkan data produk di console.
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+Membuat Class Produk
 
----
+Buat file Produk.java pada package model.
+Tambahkan atribut: kode, nama, harga, dan stok.
+Gunakan enkapsulasi dengan menjadikan atribut bersifat private dan membuat getter serta setter untuk masing-masing atribut.
+Membuat Class CreditBy
+
+Buat file CreditBy.java pada package util.
+Isi class dengan method statis untuk menampilkan identitas mahasiswa di akhir output: credit by: 240202864 - Hanifah.
+Membuat Objek Produk dan Menampilkan Credit
+
+Buat file MainProduk.java.
+Instansiasi minimal tiga objek produk, misalnya "Totebag", "Kemeja", "Flat Shose".
+Tampilkan informasi produk melalui method getter.
+Panggil CreditBy.print("240202864", "Hanifah") di akhir main untuk menampilkan identitas.
+Commit dan Push
+
+Commit dengan pesan: week2-class-object.
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+1. Produk.java
+   
+package main.java.com.upb.agripos.model;
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
----
+public class Produk {
+    private String kode;
+    private String nama;
+    private double harga;
+    private int stok;
+
+    // Constructor
+    public Produk(String kode, String nama, double harga, int stok) {
+        this.kode = kode;
+        this.nama = nama;
+        this.harga = harga;
+        this.stok = stok;
+    }
+
+    // Getter dan Setter
+    public String getKode() { return kode; }
+    public void setKode(String kode) { this.kode = kode; }
+
+    public String getNama() { return nama; }
+    public void setNama(String nama) { this.nama = nama; }
+
+    public double getHarga() { return harga; }
+    public void setHarga(double harga) { this.harga = harga; }
+
+    public int getStok() { return stok; }
+    public void setStok(int stok) { this.stok = stok; }
+
+    // Method tambahan untuk menampilkan info produk
+    public void tampilkanInfo() {
+        System.out.println("Kode Produk : " + kode);
+        System.out.println("Nama Produk : " + nama);
+        System.out.println("Harga       : Rp" + harga);
+        System.out.println("Stok        : " + stok + " unit");
+        System.out.println("----------------------------------");
+    }
+
+    public void tambahstok(int jumlah) {
+        this.stok += jumlah;
+    }
+
+    // Kurangi stok
+    public void kurangistok(int jumlah) {
+        if (this.stok >= jumlah) {
+            this.stok -= jumlah;
+        } else {
+            System.out.println("Stok tidak mencukupi!");
+        }
+    }
+
+}
+
+2. CreditBy.java
+
+package main.java.com.upb.agripos.util;
+// creditBy.java
+
+
+public class CreditBy {
+    public static void print(String nim, String nama) {
+        System.out.println("\ncredit by: " +  nama + " - " +  nim);
+    }
+}
+
+3. MainProduk.Java
+
+package main.java.com.upb.agripos;
+
+import main.java.com.upb.agripos.model.Produk;
+import main.java.com.upb.agripos.util.CreditBy;
+
+public class MainProduk {
+    public static void main(String[] args) {
+        Produk p1 = new Produk("QWE-098", "BUKU TULIS", 5000, 50);
+        Produk p2 = new Produk("RTY-765", "BOLPOIN STANDAR", 3000, 90);
+        Produk p3 = new Produk("UIO-432", "CAT AKRILIK", 25000, 20);
+        Produk p4 = new Produk("PLK-123", "TINTA PRINTER", 35000, 15);
+
+        System.out.println("Kode: " + p1.getKode() + ", Nama: " + p1.getNama() + ", Harga: " + p1.getHarga() + ", Stok: " + p1.getStok());
+        System.out.println("Kode: " + p2.getKode() + ", Nama: " + p2.getNama() + ", Harga: " + p2.getHarga() + ", Stok: " + p2.getStok());
+        System.out.println("Kode: " + p3.getKode() + ", Nama: " + p3.getNama() + ", Harga: " + p3.getHarga() + ", Stok: " + p3.getStok());
+        System.out.println("Kode: " + p4.getKode() + ", Nama: " + p4.getNama() + ", Harga: " + p4.getHarga() + ", Stok: " + p4.getStok());
+
+        System.out.println("Perubahan Stok");
+        p1.tambahstok(10) ; p1.kurangistok(43);
+        p2.tambahstok(10); 
+        p3.kurangistok(5); 
+        
+        System.out.println("Setelah perubahan:");
+        System.out.println(p1.getNama() + " stok sekarang: " + p1.getStok());
+        System.out.println(p2.getNama() + " stok sekarang: " + p2.getStok());
+        System.out.println(p3.getNama() + " stok sekarang: " + p3.getStok());
+
+
+        CreditBy.print("240202846", "WAHYU SEPTIYAN");
+    }
+}
 
 ## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
-)
----
+<img width="1920" height="1080" alt="Cuplikan layar 2025-10-07 201428" src="https://github.com/user-attachments/assets/0b853d22-0d43-4825-a658-1b682a05336e" />
 
 ## Analisis
-(
 - Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
----
+Produk.java dalam konteks aplikasi (misal aplikasi kasir atau gudang), class Produk akan digunakan seperti ini:
+Membuat objek produk saat input data barang baru.
+Mengubah data jika ada perubahan harga atau stok.
+Melakukan transaksi dengan memanggil kurangiStok() saat pembelian.
+Mengisi ulang stok dengan tambahStok(). CreditBy.java class ini dibuat untuk menampilkan informasi kredit atau identitas pembuat program, biasanya digunakan di akhir program untuk menyatakan siapa yang membuat/mengembangkan aplikasi. MainProduk untuk menampilkan daftar produk (beserta kode, nama, harga, dan stok), kemudian mencetak identitas pembuat program.
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
-
----
+Program ini merupakan contoh yang baik dari penggunaan class terpisah, modularisasi kode, dan encapsulation, yang sangat penting dalam pengembangan aplikasi skala besar. Selain itu, mencantumkan identitas pembuat memberikan nilai tambah dari sisi dokumentasi dan profesionalitas. Jika dikembangkan lebih lanjut, program ini bisa menjadi bagian dari sistem manajemen produk secara digital.
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
-
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class? Jawaban: Untuk menjaga keamanan dan integritas data. Dengan menjadikan atribut private, data tidak bisa diakses atau diubah secara langsung dari luar class, sehingga dapat mencegah perubahan yang tidak diinginkan dan memastikan bahwa semua akses terhadap data dilakukan melalui metode yang dikontrol (seperti getter dan setter). Ini adalah prinsip utama dari enkapsulasi dalam pemrograman berorientasi objek.
+Apa fungsi getter dan setter dalam enkapsulasi? Jawaban: Getter dan setter berfungsi sebagai antarmuka (interface) untuk mengakses dan mengubah nilai atribut private. Getter digunakan untuk mengambil (membaca) nilai atribut, sedangkan setter digunakan untuk mengubah nilai atribut dengan logika tertentu jika diperlukan (misalnya validasi data).
+Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks? Jawaban: Class Produk dapat menjadi fondasi utama dalam aplikasi Point of Sale (POS) karena mewakili entitas barang yang dijual. Dengan mendefinisikan atribut seperti nama, harga, dan stok dalam class Produk, serta menyediakan metode untuk mengelola data tersebut (misalnya mengurangi stok saat transaksi), kita dapat membangun sistem yang modular dan mudah dikembangkan. Dalam aplikasi POS yang lebih kompleks, class Produk bisa diperluas untuk mendukung fitur seperti kategori produk, diskon, barcode, pelacakan inventaris, dan integrasi dengan sistem lain seperti kasir atau laporan penjualan.
 
 3. [Tuliskan kembali pertanyaan 3 dari panduan]  
    **Jawaban:** …  )
