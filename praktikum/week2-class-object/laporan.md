@@ -9,13 +9,10 @@ Topik: Class dan Object
 ---
 
 ## Tujuan
-Mahasiswa mampu menjelaskan konsep class, object, atribut, dan method dalam OOP.
-
-Mahasiswa mampu menerapkan access modifier dan enkapsulasi dalam pembuatan class.
-
-Mahasiswa mampu mengimplementasikan class Produk dengan atribut dan method yang sesuai.
-
-Mahasiswa mampu mendemonstrasikan instansiasi object serta menampilkan data produk di console.
+- Mahasiswa mampu menjelaskan konsep class, object, atribut, dan method dalam OOP.
+- Mahasiswa mampu menerapkan access modifier dan enkapsulasi dalam pembuatan class.
+- Mahasiswa mampu mengimplementasikan class Produk dengan atribut dan method yang sesuai.
+- Mahasiswa mampu mendemonstrasikan instansiasi object serta menampilkan data produk di console.
 
 ## Dasar Teori
 1. Mahasiswa mampu menjelaskan konsep class, object, atribut, dan method dalam OOP.
@@ -27,28 +24,27 @@ Mahasiswa mampu mendemonstrasikan instansiasi object serta menampilkan data prod
 4. Mahasiswa mampu mendemonstrasikan instansiasi object serta menampilkan data produk di console.
 
 ## Langkah Praktikum
-Membuat Class Produk
+1. Membuat Class Produk
+- Buat file Produk.java pada package model.
+- Tambahkan atribut: kode, nama, harga, dan stok.
+- Gunakan enkapsulasi dengan menjadikan atribut bersifat private dan membuat getter serta setter untuk masing-masing atribut.
 
-Buat file Produk.java pada package model.
-Tambahkan atribut: kode, nama, harga, dan stok.
-Gunakan enkapsulasi dengan menjadikan atribut bersifat private dan membuat getter serta setter untuk masing-masing atribut.
-Membuat Class CreditBy
+2. Membuat Class CreditBy
+- Buat file CreditBy.java pada package util.
+- Isi class dengan method statis untuk menampilkan identitas mahasiswa di akhir output: credit by: 240202864 - Hanifah.
 
-Buat file CreditBy.java pada package util.
-Isi class dengan method statis untuk menampilkan identitas mahasiswa di akhir output: credit by: 240202864 - Hanifah.
-Membuat Objek Produk dan Menampilkan Credit
+3. Membuat Objek Produk dan Menampilkan Credit
+- Buat file MainProduk.java.
+- Instansiasi minimal tiga objek produk, misalnya "Totebag", "Kemeja", "Flat Shose".
+- Tampilkan informasi produk melalui method getter.
+- Panggil CreditBy.print("240202864", "Hanifah") di akhir main untuk menampilkan identitas.
 
-Buat file MainProduk.java.
-Instansiasi minimal tiga objek produk, misalnya "Totebag", "Kemeja", "Flat Shose".
-Tampilkan informasi produk melalui method getter.
-Panggil CreditBy.print("240202864", "Hanifah") di akhir main untuk menampilkan identitas.
-Commit dan Push
-
-Commit dengan pesan: week2-class-object.
+4. Commit dan Push
+- Commit dengan pesan: week2-class-object.
 
 ## Kode Program
-1. Produk.java
-   
+## 1. Produk.java
+ ``java  
 package main.java.com.upb.agripos.model;
 public class Produk {
     private String kode;
@@ -99,9 +95,9 @@ public class Produk {
     }
 
 }
-
-2. CreditBy.java
-
+```
+## 2. CreditBy.java
+```java
 package main.java.com.upb.agripos.util;
 // creditBy.java
 public class CreditBy {
@@ -109,10 +105,10 @@ public class CreditBy {
         System.out.println("\ncredit by: " +  nama + " - " +  nim);
     }
 }
+```
 
-
-3. MainProduk.Java
-
+## 3. MainProduk.Java
+```java
 package main.java.com.upb.agripos;
 import main.java.com.upb.agripos.model.Produk;
 import main.java.com.upb.agripos.util.CreditBy;
@@ -141,6 +137,7 @@ public class MainProduk {
         CreditBy.print("240202846", "WAHYU SEPTIYAN");
     }
 }
+```
 
 ## Hasil Eksekusi
 <img width="1920" height="1080" alt="Cuplikan layar 2025-10-07 201428" src="https://github.com/user-attachments/assets/0b853d22-0d43-4825-a658-1b682a05336e" />
