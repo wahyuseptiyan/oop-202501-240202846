@@ -43,14 +43,18 @@ Topik: Class dan Object
 - Commit dengan pesan: week2-class-object.
 
 ## Kode Program
+
 ## 1. Produk.java
- ``java  
+ 
+ ```java  
 package main.java.com.upb.agripos.model;
+
 public class Produk {
     private String kode;
     private String nama;
     private double harga;
     private int stok;
+
     // Constructor
     public Produk(String kode, String nama, double harga, int stok) {
         this.kode = kode;
@@ -96,18 +100,25 @@ public class Produk {
 
 }
 ```
+
 ## 2. CreditBy.java
+
 ```java
+
 package main.java.com.upb.agripos.util;
-// creditBy.java
+
+
 public class CreditBy {
     public static void print(String nim, String nama) {
-        System.out.println("\ncredit by: " +  nama + " - " +  nim);
+        System.out.println("\ncredit by: " + nim + " - " + nama);
     }
+    
 }
+
 ```
 
 ## 3. MainProduk.Java
+
 ```java
 package main.java.com.upb.agripos;
 import main.java.com.upb.agripos.model.Produk;
