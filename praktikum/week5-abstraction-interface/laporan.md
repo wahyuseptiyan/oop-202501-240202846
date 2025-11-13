@@ -63,7 +63,7 @@ Buat Pembayaran (abstract) dengan field invoiceNo, total dan method:
 ---
 
 ## Kode Program
-1. Cash.java
+## 1. Cash.java
 
 ```java
 package com.upb.agripos.model.Pembayaran;
@@ -96,7 +96,7 @@ public class Cash extends Pembayaran implements Receiptable {
 }
 ```
 
-2. EWallet.java
+## 2. EWallet.java
 ```java
 package com.upb.agripos.model.Pembayaran;
 
@@ -136,7 +136,7 @@ public class EWallet extends Pembayaran implements Validatable, Receiptable {
 }
 ```
 
-3. Pembayaran.java
+## 3. Pembayaran.java
 ```java
 package com.upb.agripos.model.Pembayaran;
 
@@ -160,7 +160,7 @@ public abstract class Pembayaran {
     public double getTotal() { return total; }
 }
 ```
-4. Receiptable.java
+## 4. Receiptable.java
 ```java
 package com.upb.agripos.model.Kontrak;
 
@@ -168,7 +168,7 @@ public interface Receiptable {
     String cetakStruk();
 }
 ```
-5. Validatable.java
+## 5. Validatable.java
 ```java
 package com.upb.agripos.model.Kontrak;
 
@@ -176,7 +176,7 @@ public interface Validatable {
     boolean validasi(); // misal validasi OTP/ PIN
 }
 ```
-6. CreditBy.java
+## 6. CreditBy.java
 ```java
 package com.upb.agripos.util;
 
@@ -187,7 +187,7 @@ public class CreditBy {
     }
 }
 ```
-7. MainAbstraction.java
+## 7. MainAbstraction.java
 ```java
 package com.upb.agripos;
 
