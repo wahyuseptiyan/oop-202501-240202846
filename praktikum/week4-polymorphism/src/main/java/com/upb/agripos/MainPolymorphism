@@ -1,0 +1,48 @@
+package com.upb.agripos;
+
+import com.upb.agripos.model.AlatPertanian;
+import com.upb.agripos.model.Benih;
+import com.upb.agripos.model.ObatHama;
+import com.upb.agripos.model.Produk;
+import com.upb.agripos.model.Pupuk; // Untuk latihan mandiri
+import com.upb.agripos.util.CreditBy;
+
+public class MainPolymorphism {
+    public static void main(String[] args) {
+        
+        // 1. Implementasi Dynamic Binding (Tugas 3)
+        // Array dibuat dari tipe Superclass (Produk)
+        Produk[] daftarProduk = {
+            // Namun diisi oleh objek-objek Subclass
+            new Benih("BNH-001", "Benih Padi IR64", 25000, 100, "IR64"),
+            new Pupuk("PPK-101", "Pupuk Urea", 350000, 40, "Urea"),
+            new AlatPertanian("ALT-501", "Cangkul Baja", 90000, 15, "Baja"),
+            new ObatHama("JKL-234", "Insektisida", 80000, 80, "Walang") // Latihan Mandiri
+        };
+
+        System.out.println("===  Daftar Info Produk (Demonstrasi Dynamic Binding) ===");
+        
+      
+        for (Produk p : daftarProduk) {
+            System.out.println(p.getInfo()); 
+        }
+
+ 
+        System.out.println("\n=== Demonstrasi Overloading tambahStok ===");
+        Produk produkTes = daftarProduk[0]; 
+        
+        System.out.println("Stok awal: " + produkTes.getStok()); 
+        
+        // Memanggil method tambahStok(int jumlah)
+        produkTes.tambahStok(9); 
+        
+        // Memanggil method tambahStok(double jumlah)
+        produkTes.tambahStok(7.8); 
+
+        
+        // 3. Panggil CreditBy
+        System.out.println("\n----------");
+
+        CreditBy.print("240202846", "Wahyu Septiyan");
+    }
+}
