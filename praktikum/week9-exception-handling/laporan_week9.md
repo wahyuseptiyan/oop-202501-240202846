@@ -200,6 +200,7 @@ public class ShoppingCart {
 ---
 
 ## Hasil Eksekusi
+<img width="1919" height="1007" alt="Cuplikan layar 2026-01-12 093358" src="https://github.com/user-attachments/assets/f734ce3b-1847-4b29-94c7-9c29e6174deb" />
 
 ---
 
@@ -228,4 +229,5 @@ Exception handling dan custom exception membuat program POS lebih aman dan tidak
 
 4. Berikan contoh kasus bisnis dalam POS yang membutuhkan custom exception.
    Jawaban: Dalam sistem POS (Point of Sale), custom exception sangat dibutuhkan untuk menangani aturan bisnis tertentu. Contohnya, ketika kasir melakukan transaksi penjualan tetapi jumlah barang yang dibeli melebihi stok yang tersedia. Dalam kondisi ini, sistem sebaiknya tidak hanya menampilkan error umum, tetapi melempar custom exception seperti StokTidakCukupException. Dengan demikian, sistem dapat mencegah transaksi yang tidak valid, menjaga keakuratan data inventori, serta memberikan informasi kesalahan yang jelas kepada pengguna sistem.
+
    
