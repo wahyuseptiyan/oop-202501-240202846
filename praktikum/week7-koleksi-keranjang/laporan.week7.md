@@ -47,7 +47,8 @@ Struktur utama:
 - Mencetak identitas diri (Nama dan NIM) sebagai bukti otentikasi pengerjaan tugas.
 
 ## Hasil Eksekusi 
-![alt text](<Cuplikan layar 2026-01-12 084214.png>)
+<img width="1919" height="1010" alt="Cuplikan layar 2026-01-12 084214" src="https://github.com/user-attachments/assets/7294fdd7-7831-431e-804a-f05b928488ee" />
+
 
 ## Kode Program
 
@@ -207,7 +208,7 @@ Jawaban: ArrayList cocok digunakan karena:
 Jawaban:
 Set mencegah duplikasi dengan cara membandingkan elemen menggunakan method equals() dan hashCode(). Jika data yang dimasukkan sudah ada di dalam Set, maka data tersebut tidak akan ditambahkan.
 
-5. Kapan sebaiknya menggunakan Map dibandingkan List? Jelaskan dengan contoh.
+4. Kapan sebaiknya menggunakan Map dibandingkan List? Jelaskan dengan contoh.
 Jawaban: Map sebaiknya digunakan ketika data perlu diakses menggunakan kunci unik.
 
 Contoh:
